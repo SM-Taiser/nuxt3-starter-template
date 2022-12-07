@@ -8,8 +8,11 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
+
+@include mobile-device {
   .router-link-exact-active {
-    color: $primary-color;
+    color: $theme-color;
   }
+}
 </style>

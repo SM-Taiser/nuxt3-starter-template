@@ -1,1 +1,8 @@
-$primary-color: rgb(224, 14, 14);
+$small-breakpoint: 576px; 
+$theme-color: red;
+
+@mixin mobile-device {
+    @media (max-width: $small-breakpoint) {
+      @content;
+    }
+}
