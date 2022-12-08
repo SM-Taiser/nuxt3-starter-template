@@ -1,9 +1,7 @@
 <template>
   <div>
     <LayoutsHeader/>
-    <div class="container mx-auto p-4">
       <slot />
-    </div>
     <LayoutsFooter/>
   </div>
 </template>

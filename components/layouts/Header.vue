@@ -8,23 +8,25 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
             </div>
-            <div class="col-2">
+            <div class="col-3">
               <div class="logo">
-                <img src="https://www.savershall.com/img/icon%20logo.54411986.png" style="width: 50px;">
+                <img src="https://www.savershall.com/img/01.78349b40.png" style="width: 100%;">
               </div>
             </div>
             <div class="col-6">
               <form class="search-form">
                 <div class="form-group">
-                  <input type="text" name="search" placeholder="Search for a product or brand.." autocomplete="off">
+                  <input type="text" name="search" autocomplete="off">
                   <button type="submit" class="send-button">
-                    <i class="icon ion-md-search"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
                   </button>
                 </div>
               </form>
             </div>
-            <div class="col-2">
-              <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Freepik - Flaticon</a>
+            <div class="col-1">
+              <div class="icon">
+                <i class="fa-regular fa-user"></i>
+              </div>
             </div>
           </div>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -61,11 +63,13 @@
 </template>
 
 <style lang="scss" scoped>
-  .search-form{
+
+@include mobile-device {
+   .search-form{
       .form-group {
-        border: 1px solid #2b2b2b;
+        border: 2px solid #ff6c25;
         align-items: center;
-        border-radius: 12px;
+        border-radius: 7px;
         overflow: hidden;
         display: flex;
         width: 100%;
@@ -90,8 +94,26 @@
         color: #2b2b2b;
         border: none;
         outline: none;
-        font-size: 22px;
         box-shadow: none;
+        i {
+          font-size: 20px;
+          padding-left: 10px;
+        }
       }
   }
+  .icon {
+    margin-top: 12px;
+    i {
+      font-size: 24px;
+    }
+  }
+  .navbar-toggler-icon {
+    width: 24px;
+  }
+  .logo {
+    width: 82px;
+    margin-top: 6px;
+    padding-left: 5px;
+  }
+}
 </style>
