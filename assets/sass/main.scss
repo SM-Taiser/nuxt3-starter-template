@@ -6,3 +6,9 @@ $theme-color: red;
       @content;
     }
 }
+
+ul {
+  li {
+    list-style: none;
+  }
+}

@@ -2,18 +2,18 @@
     <header class="shadow-sm bg-white">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <div class="row">
-            <div class="col-2">
+          <ul class="header d-flex">
+            <li class="button">
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-            </div>
-            <div class="col-3">
+            </li>
+            <li>
               <div class="logo">
-                <img src="https://www.savershall.com/img/01.78349b40.png" style="width: 100%;">
+                <img src="https://www.savershall.com/img/01.78349b40.png">
               </div>
-            </div>
-            <div class="col-6">
+            </li>
+            <li>
               <form class="search-form">
                 <div class="form-group">
                   <input type="text" name="search" autocomplete="off">
@@ -22,13 +22,13 @@
                   </button>
                 </div>
               </form>
-            </div>
-            <div class="col-1">
-              <div class="icon">
+            </li>
+            <li>
+             <div class="icon">
                 <i class="fa-regular fa-user"></i>
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
@@ -65,55 +65,68 @@
 <style lang="scss" scoped>
 
 @include mobile-device {
-   .search-form{
-      .form-group {
-        border: 2px solid #ff6c25;
-        align-items: center;
-        border-radius: 7px;
-        overflow: hidden;
-        display: flex;
-        width: 100%;
-        margin: 10px 0;
-      }
-      input {
-        letter-spacing: 1px;
-        line-height: 25px;
-        padding: 0 20px 1px;
-        height: 25px;
-        border: none;
-        width: 100%;
-        outline: none;
-        background: none;
-      }
-      .send-button {
-        text-align: center;
-        background: none;
-        line-height: 28px;
-        min-width: 40px;
-        height: 25px;
-        color: #2b2b2b;
-        border: none;
-        outline: none;
-        box-shadow: none;
-        i {
-          font-size: 20px;
-          padding-left: 10px;
+  .header {
+      margin: 0;
+      padding: 0;
+      .search-form {
+        width: 208px;
+        padding-left: 9px;
+        .form-group {
+          border: 2px solid #ff6c25;
+          align-items: center;
+          border-radius: 7px;
+          overflow: hidden;
+          display: flex;
+          width: 100%;
+          margin: 10px 0;
+          height: 22px;
         }
-      }
-  }
-  .icon {
-    margin-top: 12px;
-    i {
-      font-size: 24px;
+        input {
+          letter-spacing: 1px;
+          line-height: 25px;
+          padding: 0 20px 1px;
+          height: 25px;
+          border: none;
+          width: 100%;
+          outline: none;
+          background: none;
+        }
+        .send-button {
+          text-align: center;
+          background: none;
+          line-height: 28px;
+          min-width: 40px;
+          height: 28px;
+          color: #2b2b2b;
+          border: none;
+          outline: none;
+          box-shadow: none;
+          i {
+            font-size: 16px;
+            padding-left: 15px;
+          }
+        }
     }
-  }
-  .navbar-toggler-icon {
-    width: 24px;
-  }
-  .logo {
-    width: 82px;
-    margin-top: 6px;
-    padding-left: 5px;
+    .icon {
+      margin-top: 12px;
+      padding-left: 15px;
+      i {
+        font-size: 20px;
+      }
+    }
+    .navbar-toggler {
+      border: none;
+      .navbar-toggler-icon {
+        width: 24px;
+      }
+    }
+    .logo {
+      width: 82px;
+      margin-top: 6px;
+      img {
+        width: 100%;
+      }
+    }
   }
 }
 </style>
