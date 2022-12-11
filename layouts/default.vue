@@ -9,8 +9,6 @@
 <style lang="scss">
 
 @include mobile-device {
-  .router-link-exact-active {
-    color: $theme-color;
-  }
+
 }
 </style>

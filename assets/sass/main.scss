@@ -1,14 +1,24 @@
 $small-breakpoint: 576px; 
-$theme-color: red;
+$theme-color: #65C03A;
+$sub-theme-color: #FF6C25;
+
+body {
+  font-family: 'Roboto', sans-serif;
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+
 
 @mixin mobile-device {
     @media (max-width: $small-breakpoint) {
       @content;
     }
-}
-
-ul {
-  li {
-    list-style: none;
-  }
 }

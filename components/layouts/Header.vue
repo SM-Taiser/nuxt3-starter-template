@@ -1,62 +1,35 @@
 <template>
     <header class="shadow-sm bg-white">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <ul class="header d-flex">
-            <li class="button">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </li>
-            <li>
-              <div class="logo">
-                <img src="https://www.savershall.com/img/01.78349b40.png">
+      <nav class="navbar-expand-lg navbar-light bg-light">
+        <ul class="header d-flex">
+          <li class="button">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </li>
+          <li>
+            <div class="logo">
+              <img src="https://www.savershall.com/img/01.78349b40.png">
+            </div>
+          </li>
+          <li>
+            <form class="search-form">
+              <div class="form-group">
+                <input type="text" name="search" autocomplete="off">
+                <button type="submit" class="send-button">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
               </div>
-            </li>
-            <li>
-              <form class="search-form">
-                <div class="form-group">
-                  <input type="text" name="search" autocomplete="off">
-                  <button type="submit" class="send-button">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </button>
-                </div>
-              </form>
-            </li>
-            <li>
-             <div class="icon">
-                <i class="fa-regular fa-user"></i>
-              </div>
-            </li>
-          </ul>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
-          </div>
+          </li>
+          <li>
+            <div class="icon">
+              <i class="fa-regular fa-user"></i>
+            </div>
+          </li>
+        </ul>
+        <div class="collapse navbar-collapses" id="navbarSupportedContent">
+          <LayoutsNavbar/>
         </div>
       </nav>
     </header>
@@ -72,7 +45,7 @@
         width: 208px;
         padding-left: 9px;
         .form-group {
-          border: 2px solid #ff6c25;
+          border: 2px solid $sub-theme-color;
           align-items: center;
           border-radius: 7px;
           overflow: hidden;
@@ -104,11 +77,12 @@
           i {
             font-size: 16px;
             padding-left: 15px;
+            color: $theme-color;
           }
         }
     }
     .icon {
-      margin-top: 12px;
+      margin-top: 10px;
       padding-left: 15px;
       i {
         font-size: 20px;
@@ -116,6 +90,9 @@
     }
     .navbar-toggler {
       border: none;
+       &:focus {
+        box-shadow: unset;
+      }
       .navbar-toggler-icon {
         width: 24px;
       }
