@@ -1,3 +1,7 @@
+<script setup>
+const emit = defineEmits(['change', 'delete'])
+</script>
+
 <template>
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">

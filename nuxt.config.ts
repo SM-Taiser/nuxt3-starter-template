@@ -18,6 +18,8 @@ export default defineNuxtConfig({
        global: true,
        dirs: ['~/components']
     },
+    srcDir: 'src/',
+    ssr: false,
     vite: {
         css: {
           preprocessorOptions: {
