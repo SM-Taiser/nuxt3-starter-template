@@ -1,15 +1,12 @@
 <script setup lang="ts">
 import home from '../api/home';
 
-onMounted(async() => {
-    const {data: homeData } = await home();
-})
-console.log(process);
+const {data: homeData } = await home();
 
 </script>
 
 <template>
   <div>
-   <HomeSliders/>
+   <HomeSliders :sliders="homeData.data.sliders"/>
   </div>
 </template>

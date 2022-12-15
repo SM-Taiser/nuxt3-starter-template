@@ -1,5 +1,23 @@
-<script setup>
-const emit = defineEmits(['change', 'delete'])
+<script setup lang="ts">
+
+interface Sliders {
+    id: number;
+    title: string;
+    photo: string;
+    photo_alt: string;
+    photo_description: string;
+    status: number;
+}
+
+interface Props {
+    sliders: Sliders[];
+}
+
+const {sliders} = defineProps<Props>(); 
+
+const runtimeConfig = useRuntimeConfig();
+const cdnUrl = runtimeConfig.public.cdnUrl;  
+
 </script>
 
 <template>
@@ -10,14 +28,8 @@ const emit = defineEmits(['change', 'delete'])
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active">
-            <img src="https://www.savershall.com/eurasia-admin//storage/images//slider/s-R6Yj2ON78TtDK7GFjTo6Wf5QPCaagY.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-            <img src="https://www.savershall.com/eurasia-admin//storage/images//slider/s-R6Yj2ON78TtDK7GFjTo6Wf5QPCaagY.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-            <img src="https://www.savershall.com/eurasia-admin//storage/images//slider/s-R6Yj2ON78TtDK7GFjTo6Wf5QPCaagY.png" class="d-block w-100" alt="...">
+            <div v-for="(item, key) in sliders" :key="key" :class="['carousel-item', key === 0 ? 'active': '' ]">
+               <img :src="cdnUrl + item.photo" class="d-block w-100" :alt="item.photo_alt">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

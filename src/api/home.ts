@@ -1,6 +1,8 @@
 export default async function home () {
-    const { data, pending } = await useFetch('todos',{
-        baseURL:'https://jsonplaceholder.typicode.com'
+    const runtimeConfig = useRuntimeConfig()
+    const baseUrl = runtimeConfig.public.baseUrl;      
+    const { data, pending } = await useFetch('home',{
+        baseURL: baseUrl
     });
     
     return {

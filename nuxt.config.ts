@@ -14,10 +14,20 @@ export default defineNuxtConfig({
           ]
         },
     },
+    runtimeConfig: {
+      public: {
+        baseUrl: process.env.API_BASE_URL,
+        cdnUrl: process.env.CDN_BASE_URL
+      }
+    },
+    typescript: {
+      typeCheck: false
+    },
     components: {
        global: true,
        dirs: ['~/components']
     },
+  
     srcDir: 'src/',
     ssr: false,
     vite: {
